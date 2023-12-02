@@ -12,7 +12,7 @@ module.exports = {
     title: `Multi-Step Form`,
     description: `Fontend Mentor Challenge`,
     author: `Brian Thomas`,
-    siteUrl: ``,
+    siteUrl: `https://www.brianthomas-develops.com:`,
   },
   plugins: [
     `gatsby-plugin-image`,
