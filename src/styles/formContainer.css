@@ -1,0 +1,10 @@
+.form-container-outer{
+  display:flex;
+  padding: 1em .9em;
+  
+  
+  border-radius: 14px;
+  background: #FFFFFF;
+  box-shadow:  22px -22px 44px #e7eef7,
+              -22px 22px 44px #f5fcff;
+}
