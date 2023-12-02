@@ -4,7 +4,7 @@
   
   
   border-radius: 14px;
-  background: #FFFFFF;
+  background: var(--color-white);
   box-shadow:  22px -22px 44px #e7eef7,
               -22px 22px 44px #f5fcff;
 }

@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <div style={{ 
-                background: `var(--color-pas-blue)`,
+                background: `var(--color-ala)`,
                 overflowX: 'hidden',
                 position: `relative`,
           minHeight: `100vh`
