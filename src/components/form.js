@@ -3,6 +3,7 @@ import * as React from "react"
 import formContainer from '../styles/formContainer.css'
 import menu from '../styles/menu.css'
 import form from '../styles/form.css'
+import menuShapes from '../styles/menuShapes.css'
 
 import PathP from '../../static/bg-sidebar-desktop.svg'
 const Form = () => (
