@@ -1,0 +1,13 @@
+.form-container-outer{
+  border: 2px solid red;
+  display:flex;
+  padding: 1em .9em;
+  
+  /* !This height value will need to be removed */
+  min-height: 602px;
+  
+  border-radius: 14px;
+  background: var(--color-white);
+  box-shadow:  22px -22px 44px #e7eef7,
+              -22px 22px 44px #f5fcff;
+}

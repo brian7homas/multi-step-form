@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <div style={{ 
-                background: `var(--color-pas-blue)`,
+                background: `var(--color-ala)`,
                 overflowX: 'hidden',
                 position: `relative`,
           minHeight: `100vh`
@@ -32,9 +32,9 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          margin: `.3em auto`,
+          maxWidth: `67.4rem`,
+          padding: `0`,
           
         }}
       >

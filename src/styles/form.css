@@ -1,0 +1,18 @@
+.form-outer{
+  border: 2px solid green;
+  margin-left:6em;
+  flex-grow: 1;
+}
+.form-inner{
+  text-align: left;
+  margin: 3em .9em;
+  display:flex;
+  flex-direction: column;
+  padding-right:6em;
+}
+.form-el{
+  border: 2px solid orange;
+}
+.form-submit{
+  align-self: end;
+}
