@@ -2,16 +2,16 @@ import * as React from "react"
 
 import form from '../styles/form.css'
 
+import PathP from '../../static/bg-sidebar-desktop.svg'
 const Form = () => (
-  <section className="form-outer">
-    <div>
-      menu-outer
-      <div>
-        menu-inner
-        <div>
-          menu-container
-          <ul>
-            menu-list
+  <section className="form-container-outer">
+
+    <div className="menu-outer">
+    <PathP className="menu-bg"/>
+      <div className="menu-inner">
+      
+        <div className="menu-container">
+          <ul className="menu-list">
               <li>
                 <small>
                   Step 1

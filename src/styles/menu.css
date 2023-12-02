@@ -1,0 +1,23 @@
+.menu-outer{
+  padding: 1.5em;
+  position: relative;
+  overflow: hidden;
+  
+  /*? sets menu width */
+  min-width: 30%; 
+}
+.menu-inner{
+  position: relative;
+  z-index: 1;
+}
+
+.menu-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-bg{
+  position:absolute;
+  top:0;
+  left:0;
+}
