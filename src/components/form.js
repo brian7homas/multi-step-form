@@ -40,12 +40,11 @@ const Form = () => (
         </div>
       </div>
     </div>
-    <div>
-      form-outer
-      <div>
-        form-inner
+    <div className="form-outer">
+      <div className="form-inner">
+        <h1>Personal Info</h1>
         <p>Please provide your name, email address, and phone number.</p>
-        <form action="#">
+        <form action="#" className="form-el">
           <div>
               <label htmlFor="">Name</label>
               <input type="text" />
@@ -59,6 +58,7 @@ const Form = () => (
               <input type="" />
           </div>
         </form>
+        <button className="form-submit">Next Step</button>
       </div>
     </div>
   </section>
