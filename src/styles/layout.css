@@ -25,14 +25,7 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
-  --color-pas-blue: #EEF5FF; 
-  --color-bg: hsl(206, 94%, 87%);
-  --color-straw-red: hsl(354, 84%, 57%);
-  --color-gray: hsl(231, 11%, 63%);
-  --color-light-gray: hsl(229, 24%, 87%);
-  --color-magnolia: hsl(217, 100%, 97%);
-  --color-alabaster: hsl(231, 100%, 99%);
-  --color-white: hsl(0, 0%, 100%);
+
 
   /* Primary */
   --color-blue-1: hsl(213, 96%, 18%);
