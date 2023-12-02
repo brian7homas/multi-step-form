@@ -25,15 +25,26 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
-  --color-m-blue: hsl(213, 96%, 18%);
-  --color-p-blue: hsl(243, 100%, 62%);
-  --color-pas-blue: hsl(228, 100%, 84%); 
-  --color-light-blue: hsl(206, 94%, 87%);
+  --color-pas-blue: #EEF5FF; 
+  --color-bg: hsl(206, 94%, 87%);
   --color-straw-red: hsl(354, 84%, 57%);
   --color-gray: hsl(231, 11%, 63%);
   --color-light-gray: hsl(229, 24%, 87%);
   --color-magnolia: hsl(217, 100%, 97%);
   --color-alabaster: hsl(231, 100%, 99%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* Primary */
+  --color-blue-1: hsl(213, 96%, 18%);
+  --color-blue-2: hsl(243, 100%, 62%);
+  --color-blue-3: hsl(228, 100%, 84%);
+  --color-blue-4: hsl(206, 94%, 87%);
+  --color-straw: hsl(354, 84%, 57%);
+  /* Neautral */
+  --color-c-grey: hsl(231, 11%, 63%);
+  --color-l-grey: hsl(229, 24%, 87%);
+  --color-mag: hsl(217, 100%, 97%);
+  --color-ala: hsl(231, 100%, 99%);
   --color-white: hsl(0, 0%, 100%);
   
   --font-sans: 'ubuntu-regualr';
