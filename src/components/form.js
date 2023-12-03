@@ -5,44 +5,11 @@ import menu from '../styles/menu.css'
 import form from '../styles/form.css'
 import menuShapes from '../styles/menuShapes.css'
 
-import PathP from '../../static/bg-sidebar-desktop.svg'
+import Menu from "./menu"
 const Form = () => (
   <section className="form-container-outer">
 
-    <div className="menu-outer">
-    <PathP className="menu-bg"/>
-      <div className="menu-inner">
-      
-        <div className="menu-container">
-          <ul className="menu-list">
-              <li>
-                <small>
-                  Step 1
-                </small>
-                YOUR INFO
-              </li>
-              <li>
-                <small>
-                  Step 2
-                </small>
-                SELECT PLAN
-              </li>
-              <li>
-                <small>
-                  Step 3
-                </small>
-                ADD-ONS
-              </li>
-              <li>
-                <small>
-                  Step 4
-                </small>
-                SUMMARY
-              </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <Menu/>
     <div className="form-outer">
       <div className="form-inner">
         <h1>Personal Info</h1>
