@@ -3,7 +3,7 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
+  font-named-instance: 'ubuntu-bold';
   src: url(/fonts/Ubuntu-Bold.woff2) format("woff2");
 }
 @font-face {
@@ -11,7 +11,7 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
+  font-named-instance: 'ubuntu-medium';
   src: url(/fonts/Ubuntu-Medium.woff2) format("woff2");
 }
 @font-face {
@@ -19,7 +19,7 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  font-named-instance: 'Regular';
+  font-named-instance: 'unbuntu-regular';
   src: url(/fonts/Ubuntu-Regular.woff2) format("woff2");
 }
 :root {
@@ -40,7 +40,7 @@
   --color-ala: hsl(231, 100%, 99%);
   --color-white: hsl(0, 0%, 100%);
   
-  --font-sans: 'ubuntu-regualr';
+  --font-sans: 'ubuntu-regular';
   --font-bold: 'ubuntu-bold';
   --font-medium: 'ubuntu-medium';
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
