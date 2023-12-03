@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import gsap from 'gsap'
 import formContainer from '../styles/formContainer.css'
 import menu from '../styles/menu.css'
 import form from '../styles/form.css'
