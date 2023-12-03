@@ -3,7 +3,7 @@
   padding: 1.5em;
   position: relative;
   overflow: hidden;
-  
+  border-radius: 15px;
   /*? sets menu width */
   min-width: 30%; 
 }
@@ -22,4 +22,44 @@
   position:absolute;
   top:0;
   left:0;
+}
+
+.menu-list{
+  font-size: var(--font-md);
+  color: var(--color-white);
+  list-style-type: none;
+}
+.menu-item-shell{
+  position: relative;
+}
+.menu-item{
+  text-align:left;
+  align-self: center;
+  padding-left: 2.2em;
+  font-size: var(--font-lg);
+  margin-top: .8em;
+  margin-bottom: 1.3em;
+  font-family:'ubuntu-bold';
+}
+.menu-item-style{
+  background: var(--color-white);
+  border: 1px var(--color-white) solid;
+  border-radius: 50px 50px;
+  height:30px;
+  width: 30px;
+  position: absolute;
+  left:-.7em;
+  top: .2em;
+  z-index: -1;
+}
+.menu-item-style__number{
+  position: absolute;
+  left:-.02em;
+  top: .5em;
+  z-index: 2;
+  color:var(--color-blue-2);
+}
+.menu-item small{
+  display:block;
+  color:var(--color-c-grey);
 }
