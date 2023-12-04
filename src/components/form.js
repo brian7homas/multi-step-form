@@ -6,32 +6,15 @@ import form from '../styles/form.css'
 import menuShapes from '../styles/menuShapes.css'
 
 import Menu from "./menu"
-const Form = () => (
-  <section className="form-container-outer">
+import Step1 from "./step1"
+import Step2 from "./step2"
+import Step3 from "./step3"
+import Step4 from "./step4"
 
-    <Menu/>
-    <div className="form-outer">
-      <div className="form-inner">
-        <h1>Personal Info</h1>
-        <p>Please provide your name, email address, and phone number.</p>
-        <form action="#" className="form-el">
-          <div>
-              <label htmlFor="">Name</label>
-              <input type="text" />
-          </div>
-          <div>
-              <label htmlFor="">Email Address</label>
-              <input type="text" />
-          </div>
-          <div>
-              <label htmlFor="">Phone Number</label>
-              <input type="" />
-          </div>
-        </form>
-        <button className="form-submit">Next Step</button>
-      </div>
-    </div>
-  </section>
-)
+          <Step1 />
+          <Step2 />
+          <Step3 />
+          <Step4 />
+          <button className="form-submit-reverse">Previous Step</button>
 
 export default Form
