@@ -29,6 +29,31 @@ const menuText = [
     tlName: 'step-4'
   }
 ]
+function Menu({ tl, label }) {
+  function setActive(index){
+    let sel = document.querySelectorAll(".menu-item-style")
+    let num = document.querySelectorAll(".menu-item-style__number")
+    
+    sel.forEach((el) => el.classList.remove('menu-item-style__active'))
+    num.forEach((el) => el.classList.remove('menu-item-style__number_active'))
+    
+    if(tl.currentLabel() == 'step1' || tl.currentLabel() == 'step1-direct'){
+      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
+      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
+    }
+    if(tl.currentLabel() == 'step2' || tl.currentLabel() == 'step2-direct'){
+      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
+      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
+    }
+    if(tl.currentLabel() == 'step3' || tl.currentLabel() == 'step3-direct'){
+      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
+      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
+    }
+    if(tl.currentLabel() == 'step4' || tl.currentLabel() == 'step4-direct'){
+      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
+      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
+    }
+  }
   return (
     <div className="menu-outer">
       <PathP className="menu-bg" />
