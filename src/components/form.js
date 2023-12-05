@@ -79,24 +79,39 @@ function Form() {
 
   useEffect(() => {
     tl.add("step1")
+      .add("step1-direct")
       .addPause()
       .to(".step1", { opacity: 0 })
 
 
       .add("step2")
       .from(".step2", { y: '-10px', opacity: 0 })
+      .add("step2-direct")
       .addPause()
       .to(".step2", { opacity: 0 })
 
 
       .add("step3")
       .from(".step3", { y: '-10px', opacity: 0 })
+      .add("step3-direct")
       .addPause()
       .to(".step3", { opacity: 0 })
 
       .add("step4")
       .from(".step4", { y: '-10px', opacity: 0 })
+      .add("step4-direct")
       .addPause()
+    let next_btn = document.querySelector(".form-submit")
+    let previous_btn = document.querySelector(".form-submit-reverse")
+    previous_btn.addEventListener("click", () => {
+      tl.reverse()
+      setActive('', 'prev')
+    })
+    next_btn.addEventListener("click", (el) => {
+      tl.play()
+      setActive('', 'next')
+    })
+    setActive('step-1', 'next')
   }, [])
   return (
     <section className="form-container-outer">
@@ -113,5 +128,6 @@ function Form() {
       </div>
     </section>
   )
+}
 
 export default Form
