@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import gsap from 'gsap/gsap-core'
 import PathP from '../../static/bg-sidebar-desktop.svg'
 
 // List data
