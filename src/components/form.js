@@ -126,8 +126,10 @@ function Form() {
           <Step2 />
           <Step3 />
           <Step4 />
-          <button className="form-submit-reverse">Previous Step</button>
-          <button className="form-submit">Next Step</button>
+          <div className="form-btn-container">
+            <button className="form-submit-reverse">Previous Step</button>
+            <button className="form-submit">Next Step</button>
+          </div>
         </div>
       </div>
     </section>
