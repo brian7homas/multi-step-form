@@ -7,15 +7,15 @@ const Step1 = () => (
     <p className="step1-sub">Please provide your name, email address, and phone number.</p>
     <form action="#" className="step1-form">
       <div className="step1-form__cell">
-        <label htmlFor="" className="step1-label">Name</label >
+        <label htmlFor="" className="step1-label step-1-name">Name</label >
         <input type="text" className="step1-input"/>
       </div>
       <div className="step1-form__cell">
-        <label htmlFor="" className="step1-label">Email Address</label>
+        <label htmlFor="" className="step1-label step-1-email">Email Address</label>
         <input type="text" className="step1-input"/>
       </div>
       <div className="step1-form__cell">
-        <label htmlFor="" className="step1-label">Phone Number</label>
+        <label htmlFor="" className="step1-label step-1-phone">Phone Number</label>
         <input type="" className="step1-input"/>
       </div>
     </form>

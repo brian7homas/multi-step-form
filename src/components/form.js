@@ -81,9 +81,11 @@ function Form() {
   useEffect(() => {
     tl.add("step1")
       .add("step1-direct")
-      .addPause()
-      .to(".step1", { opacity: 0 })
-      .to('.form-submit-reverse', {opacity:1, display: 'block'})
+      .to(".step1", { opacity: 0 }, '.14')
+      .to(".step1-header", { y: '-10px', opacity: 0 }, '<')
+      .to(".step1-sub", { y: '10px', opacity: 0 }, '<')
+      .to([".step-1-name, .step-1-email, .step-1-phone"], { y: '-10px', opacity: 0, stagger:.03 }, '<')
+      .fromTo('.form-submit-reverse', {opacity:0, display: 'none', ease: 'sine'}, {opacity:1, display: 'block', ease: 'sine'},'-.025')
 
 
       .add("step2")
