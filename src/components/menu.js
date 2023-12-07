@@ -1,30 +1,29 @@
 import * as React from 'react'
-import gsap from 'gsap/gsap-core'
 import PathP from '../../static/bg-sidebar-desktop.svg'
 
 // List data
 const menuText = [
   {
     number: 1,
-    step: 'Step 1',
+    step: 'STEP 1',
     text: 'YOUR INFO',
     tlName: 'step-1'
   },
   {
     number: 2,
-    step: 'Step 2',
+    step: 'STEP 2',
     text: 'SELECT PLAN',
     tlName: 'step-2'
   },
   {
     number: 3,
-    step: 'Step 3',
+    step: 'STEP 3',
     text: 'ADD-ONS',
     tlName: 'step-3'
   },
   {
     number: 4,
-    step: 'Step 4',
+    step: 'STEP 4',
     text: 'SUMMARY',
     tlName: 'step-4'
   }
@@ -74,7 +73,7 @@ function Menu({ tl, label }) {
                         <div className={`menu-item-style ${item.tlName}`} ></div>
                         <span className="menu-item-style__number">{item.number}</span>
                         <small>{item.step}</small>
-                        {item.text}
+                        <p className="menu-item-text">{item.text}</p>
                       </li>
                     </div>
                   )
