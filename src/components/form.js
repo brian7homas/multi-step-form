@@ -83,6 +83,7 @@ function Form() {
       .add("step1-direct")
       .addPause()
       .to(".step1", { opacity: 0 })
+      .to('.form-submit-reverse', {opacity:1, display: 'block'})
 
 
       .add("step2")

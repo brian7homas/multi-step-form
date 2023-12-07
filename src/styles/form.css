@@ -24,3 +24,7 @@
   border-radius: 7px;
   color:var(--color-white);
 }
+.form-submit-reverse{
+  display:none;
+  opacity:0;
+}
