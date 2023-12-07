@@ -44,10 +44,10 @@
 }
 .menu-item-style{
   background: transparent;
-  border: 1px var(--color-white) solid;
+  border: .5px var(--color-white) solid;
   border-radius: 50px 50px;
-  height:30px;
-  width: 30px;
+  height:32px;
+  width: 32px;
   position: absolute;
   left:-.7em;
   top: .2em;
@@ -62,6 +62,7 @@
   top: .5em;
   z-index: 2;
   color:var(--color-white);
+  opacity:.8;
 }
 .menu-item-style__number_active{
   color:var(--color-blue-2);
@@ -69,4 +70,8 @@
 .menu-item small{
   display:block;
   color:var(--color-c-grey);
+  font-size:var(--font-sm);
+}
+.menu-item-text{
+  opacity: .83;
 }

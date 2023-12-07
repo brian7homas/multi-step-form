@@ -15,7 +15,8 @@ function Form() {
     paused: true,
     defaults: {
       duration: .5,
-      opacity: 0
+      opacity: 0,
+      display: 'none'
     }
   })
 

@@ -1,0 +1,21 @@
+.step1-header{
+  font-size:2.1em;
+  font-family: 'ubuntu-bold';
+  letter-spacing: .1rem;
+  margin-bottom:.5em;
+}
+.step1-sub{
+  letter-spacing: '.07rem';
+  margin-bottom:2.3em;
+}
+.step1-label{
+  display:block;
+  margin-bottom: .15em;
+}
+.step1-input{
+  height:3.2rem;
+  width:89.5%;
+}
+.step1-form__cell:not(:first-of-type){
+  margin:2.2em 0;
+}
