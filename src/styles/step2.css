@@ -1,0 +1,124 @@
+.step2-header {
+  font-size: 2.1em;
+  font-family: 'ubuntu-bold';
+  letter-spacing: .1rem;
+  margin-bottom: .5em;
+}
+
+.step2-sub {
+  letter-spacing: '.07rem';
+  margin-bottom: 1.5em;
+  font-size: var(--font-lg);
+}
+
+.step2-main {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step2-tier, .step2-length {
+  display: flex;
+}
+
+.step2-tier-option {
+  border: var(--color-blue-2) 1px solid;
+  border-radius: 4px;
+  background-color: var(--color-ala);
+}
+
+.step2-tier-option__inner {
+  margin: 1em 0 0 1em;
+}
+
+.step2-tier-option__text {
+  font-family: var(--font-bold);
+  font-size: var(--font-lg);
+  margin-bottom: .4em;
+}
+
+.step2-tier-option__monthly,
+.step2-tier-option__yearly {
+  margin-bottom: 0;
+  color: var(--color-c-grey);
+  font-family: var(--font-md);
+}
+
+.step2-tier-option__free {
+  font-size: var(--font-sm);
+  margin-bottom: 2em;
+}
+
+.step2-tier-option>img {
+  margin: 3em 3.2em;
+}
+
+.step2-tier-option:not(:last-of-type) {
+  margin-right: 1em;
+}
+
+.icon-arcade_svg__step2-tier-option__arcade-icon,
+.icon-advanced_svg__step2-tier-option__advanced-icon,
+.icon-pro_svg__step2-tier-option__pro-icon {
+  margin-right: 6em;
+  margin-bottom: 3em;
+}
+
+.step2-length {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.8em 0 1em 0;
+  background-color: var(--color-mag);
+  padding: 1em 8em 1em 7em;
+  border-radius: 5px;
+}
+
+.step2-length__toggle-container {
+  position: relative;
+  width: 2.5em;
+}
+
+.step2-length__toggle {
+  position: absolute;
+  background-color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  height: 95%;
+  width: 40px;
+}
+
+.step2-length__input {
+  position: absolute;
+  display: none;
+}
+
+.step2-length__slider {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border-radius: 50px;
+  transition: 0.3s;
+  background: black;
+}
+
+input:checked~.step2-length__slider {
+  background-color: black;
+}
+
+.step2-length__slider::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: .8em;
+  height: .8em;
+  border-radius: 100px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+input:checked~.step2-length__slider::before {
+  transform: translateX(1.5em);
+  background-color: white;
+}

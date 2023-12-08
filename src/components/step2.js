@@ -30,6 +30,11 @@ const Cards = [
   }
 ]
 const Step2 = () => (
+  <section className="step2">
+    <h1 className="step2-header">Select your plan</h1>
+    <p className="step2-sub">You have the option of monthly or yearly billing.</p>
+    <section className="step2-main">
+      <section className="step2-tier">
           {
             Cards.map((el) =>{
               return(
@@ -45,6 +50,19 @@ const Step2 = () => (
               )
             })
           }
+      </section>
+      <section className="step2-length">
+        <div>Monthly</div>
+        <div className="step2-length__toggle-container">
+          <label className="step2-length__toggle">
+            <input type="checkbox" className="step2-length__input"/>
+            <span className="step2-length__slider"></span>
+          </label>
+        </div>
+        <div>Yearly</div>
+      </section>
+    </section>
+  </section>
 )
 
 export default Step2
