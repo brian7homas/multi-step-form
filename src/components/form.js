@@ -23,7 +23,6 @@ function Form() {
   function setActive(index = null, direction) {
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
-
     sel.forEach((el) => el.classList.remove('menu-item-style__active'))
     num.forEach((el) => el.classList.remove('menu-item-style__number_active'))
     if (direction == 'prev') {
@@ -123,7 +122,7 @@ function Form() {
       <div className="form-outer">
         <div className="form-inner">
           <Step1 />
-          <Step2 />
+          <Step2 tl={tl} />
           <Step3 />
           <Step4 />
           <div className="form-btn-container">

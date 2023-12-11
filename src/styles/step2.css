@@ -29,7 +29,7 @@
 }
 
 .step2-tier-option__inner {
-  margin: 1em 0 0 1em;
+  margin: 1.5em 0 1em 1em;
 }
 
 .step2-tier-option__text {
@@ -47,7 +47,15 @@
 
 .step2-tier-option__free {
   font-size: var(--font-sm);
-  margin-bottom: 2em;
+  margin-bottom: 0;
+  display:none;
+  opacity:0;
+  visibility: 'hidden';
+}
+.step2-tier-option__yearly{
+  opacity: 0;
+  display:none;
+  visibility: 'hidden';
 }
 
 .step2-tier-option>img {
