@@ -31,7 +31,7 @@ const Cards = [
     }
   }
 ]
-function Step2({tl}){
+function Step2({tl, planSelect}){
   const termTl = gsap.timeline({defaults: {
     paused:true,
     reversed:true,
@@ -39,15 +39,15 @@ function Step2({tl}){
   const termToggle = () => {
     if (termTl.reversed()) {
       termTl.play()
-      gsap.to('.step2-tier-option__yearly', { opacity: 0, visibility: 'hidden', display: 'none' })
-      gsap.to('.step2-tier-option__monthly', { opacity: 1, visibility: 'visible', display: 'block' }, '<')
-      return gsap.to('.step2-tier-option__free', { opacity: 0, visibility: 'hidden', display: 'none' })
+      gsap.to('.step2-tier-option__yearly', {  opacity: 0, visibility: 'hidden', display: 'none' })
+      gsap.to('.step2-tier-option__monthly', { opacity: 1, visibility: 'visible', display: 'block' })
+      return gsap.fromTo('.step2-tier-option__free', { y:'0',opacity: 1, visibility: 'visible', display: 'block' }, { y:'-20px',opacity: 0, visibility: 'hidden', display: 'none' })
     }
     if (!termTl.reversed()) {
       termTl.reverse()
-      gsap.to('.step2-tier-option__yearly', { opacity: 1, visibility: 'visible', display: 'block' })
+      gsap.to('.step2-tier-option__yearly', {  opacity: 1, visibility: 'visible', display: 'block' })
       gsap.to('.step2-tier-option__monthly', { opacity: 0, visibility: 'hidden', display: 'none' }, '<')
-      return gsap.to('.step2-tier-option__free', { opacity: 1, visibility: 'visible', display: 'block' })
+      gsap.to('.step2-tier-option__free',  { y:'0',opacity: 1, visibility: 'visible', display: 'block' })
     }
   }
   useEffect(() => {
@@ -62,7 +62,7 @@ function Step2({tl}){
           {
             Cards.map((el) =>{
               return(
-                <div className="step2-tier-option">
+                <div className="step2-tier-option" onClick={(e) => planSelect(e)}>
                   <div className="step2-tier-option__inner">
                     {el.icon}
                     <h1 className="step2-tier-option__text">{el.text}</h1>

@@ -23,8 +23,19 @@
 }
 
 .step2-tier-option {
-  border: var(--color-blue-2) 1px solid;
+  border: var(--color-l-grey) 2.5px solid;
   border-radius: 4px;
+  background-color: var(--color-white);
+  cursor:pointer;
+  
+}
+
+.step2-tier-option:hover{
+  border: var(--color-blue-2) 2.5px solid;
+  background-color: var(--color-ala);
+}
+.step2-tier-option__active{
+  border: var(--color-blue-2) 2.5px solid;
   background-color: var(--color-ala);
 }
 
