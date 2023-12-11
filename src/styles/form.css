@@ -6,10 +6,9 @@
 .form-inner{
   text-align: left;
   margin: 3em 1.2em 1em 1.2em;
-  display:flex;
+  display:grid;
   flex-direction: column;
   padding-right:1em;
-  justify-content: flex-end;
   min-height: 36.99em;
 }
 .form-el{
@@ -35,6 +34,7 @@
   left:0;
 }
 .form-btn-container{
+  align-self:end;
   position:relative;
   height: 10em;
   width: 32em;
