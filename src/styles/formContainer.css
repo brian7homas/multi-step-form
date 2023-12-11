@@ -5,6 +5,7 @@
   
   /* !This height value will need to be removed */
   min-height: 602px;
+  max-width: 65.5em;
   
   border-radius: 14px;
   background: var(--color-white);

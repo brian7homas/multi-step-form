@@ -7,7 +7,7 @@
 
 .step2-sub {
   letter-spacing: '.07rem';
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
   font-size: var(--font-lg);
 }
 
@@ -80,7 +80,7 @@
 .icon-arcade_svg__step2-tier-option__arcade-icon,
 .icon-advanced_svg__step2-tier-option__advanced-icon,
 .icon-pro_svg__step2-tier-option__pro-icon {
-  margin-right: 6em;
+  margin-right: 5.5em;
   margin-bottom: 3em;
 }
 
