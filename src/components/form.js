@@ -19,11 +19,20 @@ function Form() {
       display: 'none'
     }
   })
-
+  const planSelect = (e) => {
+    let plans = document.querySelectorAll('.step2-tier-option')
+    if(e){
+      plans.forEach((el, i) => {
+        el.classList.remove('step2-tier-option__active')
+      })
+      e.currentTarget.classList.add('step2-tier-option__active')
+    }else{
+      plans[0].classList.add('step2-tier-option__active')
+    }
+  }
   function setActive(index = null, direction) {
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
-
     sel.forEach((el) => el.classList.remove('menu-item-style__active'))
     num.forEach((el) => el.classList.remove('menu-item-style__number_active'))
     if (direction == 'prev') {
@@ -89,7 +98,9 @@ function Form() {
 
 
       .add("step2")
-      .from(".step2", { y: '-10px', opacity: 0 })
+      .from(".step2", { y: '-10px', opacity: 0, onComplete:(e) => {
+        planSelect(e)
+      }})
       .add("step2-direct")
       .addPause()
       .to(".step2", { opacity: 0 })
@@ -123,11 +134,13 @@ function Form() {
       <div className="form-outer">
         <div className="form-inner">
           <Step1 />
-          <Step2 />
+          <Step2 tl={tl} planSelect={planSelect}/>
           <Step3 />
           <Step4 />
-          <button className="form-submit-reverse">Previous Step</button>
-          <button className="form-submit">Next Step</button>
+          <div className="form-btn-container">
+            <a className="form-submit-reverse">Go Back</a>
+            <button className="form-submit">Next Step</button>
+          </div>
         </div>
       </div>
     </section>
