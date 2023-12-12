@@ -23,6 +23,7 @@ function Form() {
     paused:true,
     reversed:true,
   }})
+  let term = 'monthly'
   const planSelect = (e) => {
     let plans = document.querySelectorAll('.step2-tier-option')
     if(e){
@@ -164,7 +165,7 @@ function Form() {
         <div className="form-inner">
           <Step1 />
           <Step2 tl={tl} planSelect={planSelect} termToggle={termToggle}/>
-          <Step3 />
+          <Step3 term={term}/>
           <Step4 />
           <div className="form-btn-container">
             <a className="form-submit-reverse">Go Back</a>
