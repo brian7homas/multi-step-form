@@ -19,6 +19,10 @@ function Form() {
       display: 'none'
     }
   })
+  const termTl = gsap.timeline({defaults: {
+    paused:true,
+    reversed:true,
+  }})
   const planSelect = (e) => {
     let plans = document.querySelectorAll('.step2-tier-option')
     if(e){
@@ -86,6 +90,33 @@ function Form() {
       }
     }
   }
+  const termToggle = (e) => {
+    if (termTl.reversed() && !e.currentTarget.checked) {
+      term = 'monthly'
+      termTl.play()
+      gsap.to('.step2-tier-option__yearly', {  opacity: 0, visibility: 'hidden', display: 'none' })
+      gsap.to('.step2-tier-option__monthly', { opacity: 1, visibility: 'visible', display: 'block' })
+      
+      gsap.to('.step3-add-on__yearly', { opacity: 0, visibility: 'hidden', display: 'none' })
+      gsap.to('.step3-add-on__monthly', {  opacity: 1, visibility: 'visible', display: 'block' })
+      
+      
+      return gsap.fromTo('.step2-tier-option__free', { y:'0',opacity: 1, visibility: 'visible', display: 'block' }, { y:'-20px',opacity: 0, visibility: 'hidden', display: 'none' })
+    }
+    if (!termTl.reversed() && e.currentTarget.checked) {
+      term = 'yearly'
+      termTl.reverse()
+      gsap.to('.step2-tier-option__yearly', {  opacity: 1, visibility: 'visible', display: 'block' })
+      gsap.to('.step2-tier-option__monthly', { opacity: 0, visibility: 'hidden', display: 'none' }, '<')
+      
+      gsap.to('.step3-add-on__monthly', { opacity: 0, visibility: 'hidden', display: 'none' })
+      gsap.to('.step3-add-on__yearly', {  opacity: 1, visibility: 'visible', display: 'block' })
+      
+      gsap.to('.step2-tier-option__free',  { y:'0',opacity: 1, visibility: 'visible', display: 'block' })
+    }
+    
+    
+  }
 
   useEffect(() => {
     tl.add("step1")
@@ -134,7 +165,7 @@ function Form() {
       <div className="form-outer">
         <div className="form-inner">
           <Step1 />
-          <Step2 tl={tl} planSelect={planSelect}/>
+          <Step2 tl={tl} planSelect={planSelect} termToggle={termToggle}/>
           <Step3 />
           <Step4 />
           <div className="form-btn-container">
