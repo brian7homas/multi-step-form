@@ -1,0 +1,118 @@
+.step3-header {
+  font-size: 2.1em;
+  font-family: 'ubuntu-bold';
+  letter-spacing: .1rem;
+  margin-bottom: .5em;
+}
+
+.step3-sub {
+  letter-spacing: '.07rem';
+  margin-bottom: 2em;
+  font-size: var(--font-lg);
+}
+
+.step3-add-on {
+  border: var(--color-l-grey) 2.5px solid;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  max-width: 32em;
+  margin-bottom: 1em;
+  align-items: center;
+  padding: .7em 2em 0 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.step3-add-on:hover {
+  border: var(--color-blue-2) 2.5px solid;
+  background-color: var(--color-ala);
+}
+.step3-add-on__active {
+  border: var(--color-blue-2) 2.5px solid;
+  background-color: var(--color-ala);
+}
+.step3-add-on__header {
+  font-size: var(--font-lg);
+  font-family: 'ubuntu-bold';
+}
+
+.step3-add-on__sub {
+  color: var(--color-c-grey);
+}
+
+.step3-add-on__info {
+  flex-shrink: 1;
+  text-align: left;
+}
+
+.step3-add-on__price {
+  flex-grow: 1;
+  text-align: right;
+  color: var(--color-blue-2);
+}
+.step3-add-on__checkbox-container{
+  margin-right: 1.45em;
+  padding: .8em 0 0 .2em;
+  align-self: flex-start;
+  overflow:hidden;
+  height:2.8em;
+  width:2.3em;
+}
+.step3-add-on__checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+  overflow:hidden;
+}
+.step3-add-on__checkbox > span {
+  padding: 0;
+}
+.step3-add-on__checkbox input {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid var(--color-l-grey);
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+.step3-add-on__checkbox > input:checked {
+  border: 1px solid var(--color-blue-2);
+  background-color: hsla(var(--color-blue-2), .7);
+}
+
+
+.step3-add-on__checkbox > input:checked + span::before {
+  content: '\2611';
+  border: 2px solid transparent;
+  display: block;
+  text-align: center;
+  color: white;
+  background-color: var(--color-blue-2);
+  position: absolute;
+  left: .2rem;
+  top: -.9rem;
+  font-size: 2rem;
+  z-index: 0;
+  height: 41px;
+  width: 28px;
+  padding:0;
+  margin:0;
+  border-radius: 5px;
+}
+
+.step3-add-on__checkbox > input:active {
+  border: 2px solid var(--color-blue);
+}
+
+.step3-add-on__yearly {
+  opacity: 0;
+  display: none;
+}

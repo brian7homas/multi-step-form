@@ -2,7 +2,7 @@ import * as React from 'react'
 import '../styles/step1.css'
 
 const Step1 = () => (
-  <div className="step1 step1-container">
+  <div className="step1 ">
     <h1 className="step1-header">Personal Info</h1>
     <p className="step1-sub">Please provide your name, email address, and phone number.</p>
     <form action="#" className="step1-form">
