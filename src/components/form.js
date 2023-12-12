@@ -30,8 +30,6 @@ function Form() {
         el.classList.remove('step2-tier-option__active')
       })
       e.currentTarget.classList.add('step2-tier-option__active')
-    }else{
-      plans[0].classList.add('step2-tier-option__active')
     }
   }
   function setActive(index = null, direction) {
