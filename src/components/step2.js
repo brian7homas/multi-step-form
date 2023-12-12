@@ -31,7 +31,7 @@ const Cards = [
     }
   }
 ]
-function Step2({tl, planSelect, termToggle}){
+function Step2({planSelect, termToggle}){
   useEffect(() => {
     
   }, [])
@@ -57,7 +57,7 @@ function Step2({tl, planSelect, termToggle}){
             })
           }
       </section>
-      <Step2Length tl={tl} termToggle={termToggle}/>
+      <Step2Length termToggle={termToggle}/>
     </section>
   </section>  
   )

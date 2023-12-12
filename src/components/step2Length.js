@@ -1,6 +1,6 @@
 import React from "react"
 
-function Step2Length({tl, termToggle}) {
+function Step2Length({termToggle}) {
   return (
     <section className="step2-length">
       <div>Monthly</div>
