@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/index.module.css"
 import Form from "../components/form"
+import planData from '../data/planData'
+
 function IndexPage () {
   let tl = gsap.timeline({
     paused: true,
@@ -74,11 +76,19 @@ function IndexPage () {
       })
     })
   },[])
+  return(
+    <Layout>
     <div className={styles.textCenter}>
-      <Form/>
+        <Form 
+          plan={plan}
+          setPlan={setPlan}
+          setActive={SetActive}
+          tl={tl}
+          />
     </div>
   </Layout>
-)
+  )
+}
 
 /**
  * Head export to define metadata for the page
