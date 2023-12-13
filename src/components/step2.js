@@ -44,7 +44,7 @@ function Step2({planSelect, termToggle}){
           {
             Cards.map((el) =>{
               return(
-                <div className="step2-tier-option" onClick={(e) => planSelect(e)}>
+                <div className={`step2-tier-option ${el.text.toLocaleLowerCase()}`} onClick={(e) => planSelect(e)}>
                   <div className="step2-tier-option__inner">
                     {el.icon}
                     <h1 className="step2-tier-option__text">{el.text}</h1>

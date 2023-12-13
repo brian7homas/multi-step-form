@@ -1,6 +1,6 @@
 import * as React from 'react'
 import '../styles/step4.css'
-const Step4 = ({term}) => (
+const Step4 = () => (
   <div className="step4">
     <h1 className="step4-header">Finishing up</h1>
     <p className="step4-sub">Double check everything looks OK before confirming.</p>

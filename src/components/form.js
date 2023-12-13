@@ -27,10 +27,29 @@ function Form() {
   const planSelect = (e) => {
     let plans = document.querySelectorAll('.step2-tier-option')
     if(e){
+      let selection = e.currentTarget.innerText.trim()
+      let select = selection.split('\n')[0].toLowerCase() + '-' + selection.slice(-2)
+      let step4Lables = document.querySelectorAll('.step4-TableCell p')
+      
       plans.forEach((el, i) => {
         el.classList.remove('step2-tier-option__active')
       })
       e.currentTarget.classList.add('step2-tier-option__active')
+      if(selection.slice(-2) != 'mo'){
+        //?yearly
+        step4Lables.forEach((el) => {
+          gsap.to(el, {opacity:0, display:'none', visibility:'hidden'})
+          // document.querySelector(`.step4-TableCell__${select}`).currentTarget.classList.remove('active')
+        })
+        // document.querySelector(`.step4-TableCell__${select}`).currentTarget.classList.add('active')
+        gsap.to(`.step4-TableCell__${select}`, {opacity:1, display:'block', visibility:'visible'})
+      }else{
+        //?monthly
+        step4Lables.forEach((el) => {
+          gsap.to(el, {opacity:0, display:'none', visibility:'hidden'})
+        })
+        gsap.to(`.step4-TableCell__${select}`, {opacity:1, display:'block', visibility:'visible'})
+      }
     }
   }
   function setActive(index = null, direction) {
