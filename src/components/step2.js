@@ -1,5 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
-import gsap from 'gsap/gsap-core'
+import React, { useEffect } from 'react'
 import Step2Length from './step2Length'
 import PlanSelect from '../helpers/PlanSelect'
 import planData from '../data/planData'
