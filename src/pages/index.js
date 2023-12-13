@@ -6,9 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/index.module.css"
 import Form from "../components/form"
-
-const IndexPage = () => (
-  <Layout>
+  const [plan, setPlan] = useState(planData[0])
     <div className={styles.textCenter}>
       <Form/>
     </div>

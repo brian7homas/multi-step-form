@@ -42,14 +42,11 @@ function Step2({planSelect, termToggle}){
     <section className="step2-main">
       <section className="step2-tier">
           {
-            Cards.map((el) =>{
-              return(
-                <div className={`step2-tier-option ${el.text.toLocaleLowerCase()}`} onClick={(e) => planSelect(e)}>
+                  onClick={(e) => PlanSelect(e, setPlan, plan)}>
                   <div className="step2-tier-option__inner">
                     {el.icon}
-                    <h1 className="step2-tier-option__text">{el.text}</h1>
-                    <p className="step2-tier-option__yearly">{el.price.yearly }</p>
-                    <p className="step2-tier-option__monthly">{el.price.monthly}</p>
+                    <p className="step2-tier-option__monthly">{plan.term[0].length}</p>
+                    <p className="step2-tier-option__monthly">{plan.term[0].price}</p>
                     <p className="step2-tier-option__free">2 months free</p>
                   </div>
                 </div>
@@ -57,7 +54,7 @@ function Step2({planSelect, termToggle}){
             })
           }
       </section>
-      <Step2Length termToggle={termToggle}/>
+        <Step2Length setPlan={setPlan} plan={plan} />
     </section>
   </section>  
   )
