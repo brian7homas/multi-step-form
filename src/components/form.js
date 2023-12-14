@@ -7,9 +7,10 @@ import Step3 from "./step3"
 import Step4 from "./step4"
 import '../styles/formContainer.css'
 import '../styles/form.css'
-function Form({setPlan, plan, setActive, tl}) {
-
-  useEffect(() => {}, [])
+function Form({setPlan, plan, tl, SetActive}) {
+  useEffect(() => {
+    SetActive('step-1', 'next', tl)
+  }, [])
   return (
     <section className="form-container-outer">
       <Menu tl={tl} />
