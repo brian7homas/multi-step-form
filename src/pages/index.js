@@ -1,4 +1,4 @@
-import gsap from 'gsap/gsap-core'
+import gsap from 'gsap'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
