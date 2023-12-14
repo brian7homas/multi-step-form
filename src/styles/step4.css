@@ -51,3 +51,10 @@
 .step4-tableCell__plan-name{
   margin-right: 1em;
 }
+
+.step4-tableCell__total{
+  display:flex;
+}
+.step4-tableCell__total{
+  margin-right: 1em;
+}

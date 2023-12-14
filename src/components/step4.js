@@ -31,9 +31,16 @@ function Step4({plan}) {
                   <div className="step4-tableCell">&nbsp;</div>
                 </div>
                 <div className="step4-tableRow">
+                  <div className="step4-tableCell">
+                    <div className="step4-tableCell__total">
+                      <p>Total</p>
+                      <span>per ({plan.termUser[0].length})</span>
+                    </div>
+                  </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">&nbsp;</div>
+                  <div className="step4-tableCell">
+                    <p>{plan.termUser[0].price}</p>
+                  </div>
                 </div>
               </div>
             </div>
