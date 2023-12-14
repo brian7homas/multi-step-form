@@ -11,10 +11,16 @@ const planData = [
         length:'monthly',
         price: '$9/mo'
       },
-      // {
-      //   length:'yearly',
-      //   price: '$9/yr'
-      // },
+      {
+        length:'yearly',
+        price: '$9/yr'
+      },
+    ],
+    termUser: [
+      {
+        length:'monthly',
+        price: '$9/mo'
+      },
     ],
   },
   {
@@ -25,10 +31,16 @@ const planData = [
         length:'monthly',
         price: '$12/mo'
       },
-      // {
-      //   length:'yearly',
-      //   price: '$120/yr'
-      // },
+      {
+        length:'yearly',
+        price: '$120/yr'
+      },
+    ],
+    termUser: [
+      {
+        length:'monthly',
+        price: '$12/mo'
+      },
     ],
   },
   {
@@ -39,11 +51,17 @@ const planData = [
         length:'monthly',
         price: '$15/mo'
       },
-      // {
-      //   length:'yearly',
-      //   price: '$150/yr'
-      // },
+      {
+        length:'yearly',
+        price: '$150/yr'
+      },
     ],
+    termUser: [
+      {
+        length:'monthly',
+        price: '$15/mo'
+      },
+    ]
   }
 ]
 export default planData

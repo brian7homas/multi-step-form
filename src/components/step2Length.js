@@ -16,8 +16,26 @@ function Step2Length({ setPlan, plan }) {
                       name: plan.name,
                       term: [
                         {
+                          length: 'monthly',
+                          price: '$9/mo'
+                        },
+                        {
                           length: 'yearly',
                           price: '$90/yr'
+                        },
+                      ],
+                      termUser: [
+                        {
+                          length: 'yearly',
+                          price: '$90/yr'
+                        },
+                        {
+                          length: 'yearly',
+                          price: '$120/yr'
+                        },
+                        {
+                          length: 'yearly',
+                          price: '$150/yr'
                         },
                       ],
                     })
@@ -26,6 +44,16 @@ function Step2Length({ setPlan, plan }) {
                     setPlan({
                       name: plan.name,
                       term: [
+                        {
+                          length: 'monthly',
+                          price: '$12/mo'
+                        },
+                        {
+                          length: 'yearly',
+                          price: '$120/yr'
+                        },
+                      ],
+                      termUser: [
                         {
                           length: 'yearly',
                           price: '$120/yr'
@@ -37,6 +65,16 @@ function Step2Length({ setPlan, plan }) {
                     setPlan({
                       name: plan.name,
                       term: [
+                        {
+                          length: 'monthly',
+                          price: '$15/mo'
+                        },
+                        {
+                          length: 'yearly',
+                          price: '$150/yr'
+                        },
+                      ],
+                      termUser: [
                         {
                           length: 'yearly',
                           price: '$150/yr'
@@ -55,6 +93,16 @@ function Step2Length({ setPlan, plan }) {
                           length: 'monthly',
                           price: '$9/mo'
                         },
+                        {
+                          length: 'yearly',
+                          price: '$90/yr'
+                        },
+                      ],
+                      termUser: [
+                        {
+                          length: 'monthly',
+                          price: '$9/mo'
+                        },
                       ],
                     })
                     break
@@ -66,6 +114,16 @@ function Step2Length({ setPlan, plan }) {
                           length: 'monthly',
                           price: '$12/mo'
                         },
+                        {
+                          length: 'yearly',
+                          price: '$120/yr'
+                        },
+                      ],
+                      termUser: [
+                        {
+                          length: 'monthly',
+                          price: '$12/mo'
+                        },
                       ],
                     })
                     break
@@ -73,6 +131,16 @@ function Step2Length({ setPlan, plan }) {
                     setPlan({
                       name: plan.name,
                       term: [
+                        {
+                          length: 'monthly',
+                          price: '$15/mo'
+                        },
+                        {
+                          length: 'yearly',
+                          price: '$150/yr'
+                        },
+                      ],
+                      termUser: [
                         {
                           length: 'monthly',
                           price: '$15/mo'

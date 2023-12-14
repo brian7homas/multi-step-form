@@ -13,7 +13,7 @@ function Step2({ setPlan, plan }) {
       <section className="step2-main">
         <section className="step2-tier">
           {
-            planData.map((el) => {
+            planData.map((el, i) => {
               return (
                 <div 
                   key={el.name} 
@@ -22,8 +22,8 @@ function Step2({ setPlan, plan }) {
                   <div className="step2-tier-option__inner">
                     {el.icon}
                     <h1 className="step2-tier-option__text">{el.name}</h1>
-                    <p className="step2-tier-option__monthly">{plan.term[0].length}</p>
-                    <p className="step2-tier-option__monthly">{plan.term[0].price}</p>
+                    <p className="step2-tier-option__monthly">{plan.termUser[0].length}</p>
+                    <p className="step2-tier-option__monthly">{plan.termUser[0].length == 'monthly' ? el.term[0].price : el.term[1].price}</p>
                     <p className="step2-tier-option__free">2 months free</p>
                   </div>
                 </div>
