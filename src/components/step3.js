@@ -1,31 +1,7 @@
 import * as React from 'react'
+import AddOns from '../data/addOnData'
 import '../styles/step3.css'
-const AddOns = [
-  {
-    header:'Online services',
-    sub: 'Access to multiplayer games',
-    price:{
-      monthly: '+$1/mo',
-      yearly: '+$10/yr'
-    }
-  },
-  {
-    header:'Larger storage',
-    sub:'Extra 1TB of cloud save',
-    price:{
-      monthly: '+$2/mo',
-      yearly: '+$20/yr'
-    }
-  },
-  {
-    header:'Customizable profile',
-    sub: 'Custom theme on your profile',
-    price:{
-      monthly: '+$2/mo',
-      yearly: '+$20/yr'
-    }
-  }
-]
+
 const Select = (e) => {
   let parent = e.currentTarget.parentNode.parentNode.parentNode
   if(!e.currentTarget.checked){
@@ -42,7 +18,7 @@ const Step3 = ({value}) => (
       {
         AddOns.map((el) => {
           return(
-            <div className="step3-add-on">
+            <div key={el.header} className="step3-add-on">
               <section className="step3-add-on__checkbox-container">
                 <label className="step3-add-on__checkbox" htmlFor="">
                   <input type="checkbox" name="" id="" onClick={e => Select(e)}/>
