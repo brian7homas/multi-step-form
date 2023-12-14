@@ -25,6 +25,9 @@ function IndexPage () {
     let next_btn = document.querySelector(".form-submit" )
     let menu_btn = document.querySelectorAll(".menu-item")
     let previous_btn = document.querySelector(".form-submit-reverse")
+    let sel = document.querySelectorAll(".menu-item-style")
+    let num = document.querySelectorAll(".menu-item-style__number")
+    
     tl.add("step1")
       .add("step1-direct")
       .to(".step1", { opacity: 0 }, '.14')
@@ -50,29 +53,39 @@ function IndexPage () {
       .addPause()
     previous_btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
     next_btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
-    menu_btn.forEach((el) => {
+    menu_btn.forEach((el, i) => {
       el.addEventListener('click', (index) => {
         let step = index.currentTarget.id
+        sel.forEach((el) => el.classList.remove('menu-item-style__active'))
+          num.forEach((el) => el.classList.remove('menu-item-style__number_active'))
         switch (step){
           case 'step 1':
             tl
               .timeScale(2)
-              .tweenTo('step1-direct')
+              .tweenTo('step1-direct');
+            sel[0].setAttribute("class", "menu-item-style menu-item-style__active")
+            num[0].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 2':
             tl
               .timeScale(2)
               .tweenTo('step2-direct')
+            sel[1].setAttribute("class", "menu-item-style menu-item-style__active")
+            num[1].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 3':
             tl
               .timeScale(2)
               .tweenTo('step3-direct')
+            sel[2].setAttribute("class", "menu-item-style menu-item-style__active")
+            num[2].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 4':
             tl
               .timeScale(2)
               .tweenTo('step4-direct')
+            sel[3].setAttribute("class", "menu-item-style menu-item-style__active")
+            num[3].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
         }
       })

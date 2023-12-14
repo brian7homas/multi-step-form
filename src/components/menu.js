@@ -29,7 +29,7 @@ const menuText = [
     tlName: 'step-4'
   }
 ]
-function Menu({ tl, label }) {
+function Menu() {
   
   return (
     <div className="menu-outer">
