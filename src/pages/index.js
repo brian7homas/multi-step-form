@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
@@ -6,6 +7,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../styles/index.module.css"
 import Form from "../components/form"
+import SetActive from "../helpers/SetActive"
 import planData from '../data/planData'
 
 function IndexPage () {
@@ -46,8 +48,8 @@ function IndexPage () {
       .from(".step4", { y: '-10px', opacity: 0 })
       .add("step4-direct")
       .addPause()
-    previous_btn.addEventListener("click", () => tl.reverse())
-    next_btn.addEventListener('click', () => tl.play())
+    previous_btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
+    next_btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
     menu_btn.forEach((el) => {
       el.addEventListener('click', (index) => {
         let step = index.currentTarget.id
@@ -82,7 +84,7 @@ function IndexPage () {
         <Form 
           plan={plan}
           setPlan={setPlan}
-          setActive={SetActive}
+          SetActive={SetActive}
           tl={tl}
           />
     </div>
