@@ -41,8 +41,13 @@
 	display: table-row-group;
 }
 
-.step4-tableCell p{
-  opacity: 0;
-  display:none;
-  visibility: hidden;
+.step4-tableCell__plan{
+  display:flex;
+}
+
+.step4-tableCell__plan-name, .step4-tableCell__plan-term {
+  font-family: var(--font-bold);
+}
+.step4-tableCell__plan-name{
+  margin-right: 1em;
 }
