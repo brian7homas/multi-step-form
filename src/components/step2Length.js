@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import TermLengthSwtich from "../helpers/TermLengthSwitch"
 import planData from "../data/planData"
 function Step2Length({ setPlan, plan, setAddOn }) {
   useEffect(() => { }, [plan])
@@ -15,6 +16,7 @@ function Step2Length({ setPlan, plan, setAddOn }) {
               addOnActive[i].classList.remove('step3-add-on__active')
             })
             setAddOn([])
+            planData.forEach((el) => TermLengthSwtich(e, setPlan, plan))
           }} />
           <span className="step2-length__slider"></span>
         </label>
