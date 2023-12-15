@@ -1,0 +1,89 @@
+.step4-header {
+  font-size: 2.1em;
+  font-family: 'ubuntu-bold';
+  letter-spacing: .1rem;
+  margin-bottom: .5em;
+}
+
+.step4-sub {
+  letter-spacing: '.07rem';
+  margin-bottom: 2em;
+  font-size: var(--font-lg);
+}
+
+.step4-table{
+	display: table;
+	width: 100%;
+  font-family: var(--font-bold);
+}
+.step4-tableRow {
+	display: table-row;
+  position:relative;
+}
+.step4-tableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+
+.step4-tableCell, .step4-tableHead{
+	
+	display: table-cell;
+	padding: 3px 10px;
+}
+.step4-tableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.step4-tableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.step4-tableBody {
+	display: table-row-group;
+}
+
+.step4-tableCell__plan{
+  display:flex;
+}
+
+
+.step4-tableCell__plan-name{
+  margin-right: 1em;
+}
+
+.step4-tableCell__total{
+  display:flex;
+}
+.step4-tableCell__total{
+  margin-right: 1em;
+}
+.step4-tableRow {
+  border-bottom: 1px solid #999999;
+}
+.step4-tableCell__border{
+  position:absolute;
+  background-color: var(--color-l-grey);
+  height: 1px;
+  width:80%;
+  bottom:.85em;
+  left:2.5em;
+  
+}
+
+.step4-tableRow:not(:last-of-type){
+  background-color: var(--color-mag);
+}
+
+.step4-tableCell__end{
+  text-align:right;
+}
+.step4-tableCell__end-total > p{
+  font-size: 2rem;
+  color:#6259ff;
+}
+.step4-tableCell__light{
+  font-family: var(--font-sans);
+  color: var(--color-c-grey);
+}

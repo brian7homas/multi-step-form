@@ -1,6 +1,7 @@
 import * as React from 'react'
 import PathP from '../../static/bg-sidebar-desktop.svg'
-
+import '../styles/menu.css'
+import '../styles/menuShapes.css'
 // List data
 const menuText = [
   {
@@ -28,31 +29,8 @@ const menuText = [
     tlName: 'step-4'
   }
 ]
-function Menu({ tl, label }) {
-  function setActive(index){
-    let sel = document.querySelectorAll(".menu-item-style")
-    let num = document.querySelectorAll(".menu-item-style__number")
-    
-    sel.forEach((el) => el.classList.remove('menu-item-style__active'))
-    num.forEach((el) => el.classList.remove('menu-item-style__number_active'))
-    
-    if(tl.currentLabel() == 'step1' || tl.currentLabel() == 'step1-direct'){
-      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
-      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
-    }
-    if(tl.currentLabel() == 'step2' || tl.currentLabel() == 'step2-direct'){
-      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
-      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
-    }
-    if(tl.currentLabel() == 'step3' || tl.currentLabel() == 'step3-direct'){
-      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
-      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
-    }
-    if(tl.currentLabel() == 'step4' || tl.currentLabel() == 'step4-direct'){
-      sel[index].setAttribute("class", "menu-item-style menu-item-style__active")
-      num[index].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
-    }
-  }
+function Menu() {
+  
   return (
     <div className="menu-outer">
       <PathP className="menu-bg" />
@@ -61,15 +39,10 @@ function Menu({ tl, label }) {
           <ul className="menu-list">
             <div className="menu-item-container">
               {
-                menuText.map((item, index) => {
+                menuText.map((item) => {
                   return (
-                    <div className="menu-item-shell">
-                      <li className="menu-item" onClick={() => {
-                          tl
-                          .timeScale(2)
-                          .tweenTo(`step${index+1}-direct`, {ease: "in.strong"})
-                          setActive(index)
-                        }}>
+                    <div key={item.step} className="menu-item-shell">
+                      <li id={item.step.toLocaleLowerCase()} className="menu-item" >
                         <div className={`menu-item-style ${item.tlName}`} ></div>
                         <span className="menu-item-style__number">{item.number}</span>
                         <small>{item.step}</small>

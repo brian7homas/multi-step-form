@@ -21,7 +21,6 @@
   align-items: center;
   padding: .7em 2em 0 1em;
   border-radius: 5px;
-  cursor: pointer;
   transition: all .5s;
 }
 
