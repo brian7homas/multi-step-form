@@ -68,8 +68,8 @@ function Step4({plan, addOn}) {
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
                     <div className="step4-tableCell__total">
-                      <p>Total</p>
-                      <span>per ({plan.termUser[0].length})</span>
+                      <p className="step4-tableCell__plan-name">Total</p>
+                      <span>per ({plan.termUser[0].length == 'monthly' ? 'month' : 'year'})</span>
                     </div>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
