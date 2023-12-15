@@ -39,6 +39,7 @@ function Step4({plan, addOn}) {
                   <div className="step4-tableCell">
                     <p>{plan.termUser[0].price}</p>
                   </div>
+                  <span className="step4-tableCell__border"></span>
                 </div>
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
