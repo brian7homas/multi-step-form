@@ -15,6 +15,7 @@
   border: 2px solid orange;
 }
 .form-submit{
+  cursor: pointer;
   font-size: 16px;
   padding: 0.8em 1.5em;
   background:var(--color-text);
@@ -26,6 +27,7 @@
   top:5em;
 }
 .form-submit-reverse{
+  cursor: pointer;
   opacity:0;
   position:absolute;
   top: 5.5em;
