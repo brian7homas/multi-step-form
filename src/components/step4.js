@@ -35,8 +35,8 @@ function Step4({plan, addOn}) {
                     <div className="step4-tableCell__plan">
                       <p className="step4-tableCell__plan-name">{plan.name}</p>
                       <p className="step4-tableCell__plan-term">({plan.termUser[0].length})</p>
-                      <span><a id="change" href="#">change</a></span>
                     </div>
+                    <span><a id="change" href="#">Change</a></span>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
                   {/* 
