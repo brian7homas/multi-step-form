@@ -29,6 +29,7 @@ function IndexPage () {
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
     let change = document.querySelector('#change')
+    let btn = document.querySelector('.form-submit')
     tl.add("step1")
       .add("step1-direct")
       .to(".step1", { opacity: 0 }, '.14')
@@ -71,29 +72,33 @@ function IndexPage () {
         switch (step){
           case 'step 1':
             tl
-              .timeScale(2)
-              .tweenTo('step1-direct');
+              .timeScale(3)
+              .tweenTo('step1-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[0].setAttribute("class", "menu-item-style menu-item-style__active")
             num[0].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 2':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step2-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[1].setAttribute("class", "menu-item-style menu-item-style__active")
             num[1].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 3':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step3-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[2].setAttribute("class", "menu-item-style menu-item-style__active")
             num[2].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 4':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step4-direct')
+              .then(() => btn.textContent = 'Confirm')
             sel[3].setAttribute("class", "menu-item-style menu-item-style__active")
             num[3].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
