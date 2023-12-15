@@ -56,7 +56,10 @@ function Step4({plan, addOn}) {
                     {
                       addOn[0] ? addOn.map(el => {
                         return(
-                          <p key={el.plan.price}>${el.plan.price}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p>
+                          <p key={el.plan.name + '-' + el.plan.price}>
+                            +${el.plan.price}
+                            {plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}
+                          </p>
                         )
                       } ) : <p>$0</p>
                     }
