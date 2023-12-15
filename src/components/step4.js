@@ -65,7 +65,7 @@ function Step4({plan, addOn}) {
                   {/* 
                       Add-on price - right
                   */}
-                  <div className="step4-tableCell step4-tableCell__end">
+                  <div className="step4-tableCell step4-tableCell__end .step4-tableCell__addon-price">
                     {
                       addOn[0] ? addOn.map(el => {
                         return(
@@ -84,7 +84,7 @@ function Step4({plan, addOn}) {
                       Total text - left
                     */}
                     <div className="step4-tableCell__total">
-                      <p className="step4-tableCell__plan-name">Total</p>
+                      <p className="step4-tableCell__plan-total">Total</p>
                       <span>per ({plan.termUser[0].length == 'monthly' ? 'month' : 'year'})</span>
                     </div>
                   </div>

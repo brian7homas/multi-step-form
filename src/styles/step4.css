@@ -1,3 +1,6 @@
+.step4{
+  width: 93%;
+}
 .step4-header {
   font-size: 2.1em;
   font-family: 'ubuntu-bold';
@@ -26,9 +29,8 @@
 }
 
 .step4-tableCell, .step4-tableHead{
-	
 	display: table-cell;
-	padding: 3px 10px;
+	padding: 15px 10px;
 }
 .step4-tableHeading {
 	background-color: #EEE;
@@ -47,9 +49,13 @@
 .step4-tableCell__plan{
   display:flex;
 }
-
-
-.step4-tableCell__plan-name{
+.step4-tableCell__plan p{
+  margin-bottom: 0;
+}
+.step4-tableCell__plan-total, .step4-tableCell__plan-total ~ span{
+  color:var(--color-c-grey);
+}
+.step4-tableCell__plan-name{  
   margin-right: 1em;
 }
 
@@ -83,7 +89,17 @@
   font-size: 2rem;
   color:#6259ff;
 }
+.step4-tableCell__addon-price{
+  font-family: var(--font-sans);
+}
 .step4-tableCell__light{
   font-family: var(--font-sans);
   color: var(--color-c-grey);
+}
+
+#change{
+  color: var(--color-c-grey);
+}
+#change:hover{
+  color:var(--color-blue-2);
 }
