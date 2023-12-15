@@ -28,7 +28,7 @@ function IndexPage () {
     let previous_btn = document.querySelector(".form-submit-reverse")
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
-    
+    let change = document.querySelector('#change')
     tl.add("step1")
       .add("step1-direct")
       .to(".step1", { opacity: 0 }, '.14')
@@ -54,6 +54,7 @@ function IndexPage () {
       .addPause()
     previous_btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
     next_btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
+    change.addEventListener('click', () => {tl.timeScale(3).tweenTo('step2-direct');SetActive('step2', '', tl)})
     menu_btn.forEach((el, i) => {
       el.addEventListener('click', (index) => {
         let step = index.currentTarget.id

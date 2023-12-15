@@ -56,6 +56,10 @@ function setActive(index = null, direction, tl) {
       return
     }
   }
+  if(index == 'step2'){
+    sel[1].setAttribute("class", "menu-item-style menu-item-style__active")
+    num[1].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
+  }
 }
 
 export default setActive
