@@ -23,6 +23,7 @@
 }
 
 .step2-tier-option {
+  margin-bottom:0;
   border: var(--color-l-grey) 2.5px solid;
   border-radius: 4px;
   background-color: var(--color-white);
@@ -49,7 +50,7 @@
   margin-bottom: .4em;
 }
 
-.step2-tier-option__monthly,
+.step2-tier-option__price,
 .step2-tier-option__yearly {
   margin-bottom: 0;
   color: var(--color-c-grey);
@@ -59,9 +60,6 @@
 .step2-tier-option__free {
   font-size: var(--font-sm);
   margin-bottom: 0;
-  display:none;
-  opacity:0;
-  visibility: 'hidden';
 }
 .step2-tier-option__yearly{
   opacity: 0;
