@@ -21,6 +21,7 @@ function IndexPage () {
   })
   
   const [plan, setPlan] = useState(planData[0])
+  const [addOn, setAddOn] = useState([])
   useEffect(() => {
     let next_btn = document.querySelector(".form-submit" )
     let menu_btn = document.querySelectorAll(".menu-item")
@@ -95,6 +96,8 @@ function IndexPage () {
     <Layout>
     <div className={styles.textCenter}>
         <Form 
+          addOn={addOn}
+          setAddOn={setAddOn}
           plan={plan}
           setPlan={setPlan}
           SetActive={SetActive}

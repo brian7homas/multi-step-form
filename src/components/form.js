@@ -7,7 +7,7 @@ import Step3 from "./step3"
 import Step4 from "./step4"
 import '../styles/formContainer.css'
 import '../styles/form.css'
-function Form({setPlan, plan, tl, SetActive}) {
+function Form({addOn, setAddOn, setPlan, plan, tl, SetActive}) {
   useEffect(() => {
     SetActive('step-1', 'next', tl)
   }, [])
@@ -21,9 +21,14 @@ function Form({setPlan, plan, tl, SetActive}) {
             tl={tl} 
             plan={plan}
             setPlan={setPlan}
+            setAddOn={setAddOn}
             />
-          <Step3 plan={plan}/>
-          <Step4 plan={plan}/>
+          <Step3 
+            plan={plan}
+            addOn={addOn}
+            setAddOn={setAddOn}
+            />
+          <Step4 plan={plan} addOn={addOn}/>
           <div className="form-btn-container">
             <a className="form-submit-reverse">Go Back</a>
             <button className="form-submit">Next Step</button>

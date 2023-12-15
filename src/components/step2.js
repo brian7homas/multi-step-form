@@ -4,7 +4,7 @@ import PlanSelect from '../helpers/PlanSelect'
 import planData from '../data/planData'
 import '../styles/step2.css'
 
-function Step2({ setPlan, plan }) {
+function Step2({ setPlan, plan, setAddOn }) {
   useEffect(() => {}, [plan])
   return (
     <section className="step2">
@@ -18,7 +18,7 @@ function Step2({ setPlan, plan }) {
                 <div 
                   key={el.name} 
                   className={`step2-tier-option ${el.name.toLocaleLowerCase()} ${el.name == plan.name ? "step2-tier-option__active" : ""}`} 
-                  onClick={(e) => PlanSelect(e, setPlan, plan)}>
+                  onClick={(e) => PlanSelect(e, setPlan, setAddOn)}>
                   <div className="step2-tier-option__inner">
                     {el.icon}
                     <h1 className="step2-tier-option__text">{el.name}</h1>
@@ -31,7 +31,7 @@ function Step2({ setPlan, plan }) {
             })
           }
         </section>
-        <Step2Length setPlan={setPlan} plan={plan} />
+        <Step2Length setPlan={setPlan} plan={plan} setAddOn={setAddOn}/>
       </section>
     </section>
   )

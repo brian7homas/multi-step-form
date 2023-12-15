@@ -1,7 +1,23 @@
 import React, { useEffect } from 'react'
 import '../styles/step4.css'
-function Step4({plan}) {
-  useEffect(() =>{},[plan])
+function Step4({plan, addOn}) {
+  
+  let total = 0
+  const calculate = () => {
+    if(addOn.length > 2){
+      total = Number(addOn[0].plan.price) +
+      Number(addOn[1].plan.price) +
+      Number(plan.termUser[0].price.match(/\d+/))
+    }
+    if(addOn.length > 3){
+      total = Number(addOn[0].plan.price) +
+      Number(addOn[1].plan.price) +
+      Number(addOn[2].plan.price) +
+      Number(plan.termUser[0].price.match(/\d+/))
+    }
+    return total
+  }
+  useEffect(() =>{},[addOn])
   return(
     <div className="step4">
       <h1 className="step4-header">Finishing up</h1>
@@ -25,10 +41,24 @@ function Step4({plan}) {
                 </div>
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
-                    
+                    {
+                      addOn[0] ? addOn.map(el => {
+                        return(
+                          <p key={el.plan.name}>{el.plan.name}</p>
+                        )
+                      } ) : <p>(No Add-ons added)</p>
+                    }
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">&nbsp;</div>
+                  <div className="step4-tableCell">
+                    {
+                      addOn[0] ? addOn.map(el => {
+                        return(
+                          <p key={el.plan.price}>${el.plan.price}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p>
+                        )
+                      } ) : <p>$0</p>
+                    }
+                  </div>
                 </div>
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
@@ -39,7 +69,30 @@ function Step4({plan}) {
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
                   <div className="step4-tableCell">
-                    <p>{plan.termUser[0].price}</p>
+                    {
+                      !addOn[0] 
+                      ? <p>${plan.termUser[0].price.match(/\d+/)}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p> 
+                      : addOn.map(() =>{
+                        total = 0
+                        if(addOn.length == 1){
+                          total = Number(addOn[0].plan.price) +
+                            Number(plan.termUser[0].price.match(/\d+/))
+                        }
+                        
+                        if(addOn.length == 2){
+                          total = Number(addOn[0].plan.price) +
+                            Number(addOn[1].plan.price) +
+                            Number(plan.termUser[0].price.match(/\d+/))
+                        }
+                        if(addOn.length == 3){
+                          total = Number(addOn[0].plan.price) +
+                            Number(addOn[1].plan.price) +
+                            Number(addOn[2].plan.price) +
+                            Number(plan.termUser[0].price.match(/\d+/))
+                        }
+                      })
+                    }
+                    {!addOn[0] ? '' : <p>${total}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p>}
                   </div>
                 </div>
               </div>
