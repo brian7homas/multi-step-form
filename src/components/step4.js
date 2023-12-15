@@ -29,6 +29,9 @@ function Step4({plan, addOn}) {
               <div className="step4-tableBody">
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
+                    {/* 
+                        Plan name - left
+                    */}
                     <div className="step4-tableCell__plan">
                       <p className="step4-tableCell__plan-name">{plan.name}</p>
                       <p className="step4-tableCell__plan-term">({plan.termUser[0].length})</p>
@@ -36,12 +39,18 @@ function Step4({plan, addOn}) {
                     </div>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
+                  {/* 
+                      Plan price - right
+                  */}
                   <div className="step4-tableCell step4-tableCell__end">
                     <p>{plan.termUser[0].price}</p>
                   </div>
                   <span className="step4-tableCell__border"></span>
                 </div>
                 <div className="step4-tableRow">
+                  {/* 
+                      Add-on text - left
+                  */}
                   <div className="step4-tableCell step4-tableCell__light">
                     {
                       addOn[0] ? addOn.map(el => {
@@ -52,6 +61,10 @@ function Step4({plan, addOn}) {
                     }
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
+                  
+                  {/* 
+                      Add-on price - right
+                  */}
                   <div className="step4-tableCell step4-tableCell__end">
                     {
                       addOn[0] ? addOn.map(el => {
@@ -67,11 +80,17 @@ function Step4({plan, addOn}) {
                 </div>
                 <div className="step4-tableRow">
                   <div className="step4-tableCell">
+                    {/* 
+                      Total text - left
+                    */}
                     <div className="step4-tableCell__total">
                       <p className="step4-tableCell__plan-name">Total</p>
                       <span>per ({plan.termUser[0].length == 'monthly' ? 'month' : 'year'})</span>
                     </div>
                   </div>
+                  {/* 
+                      Add-on price - right
+                  */}
                   <div className="step4-tableCell">&nbsp;</div>
                   <div className="step4-tableCell step4-tableCell__end step4-tableCell__end-total ">
                     {
