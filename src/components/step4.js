@@ -36,13 +36,13 @@ function Step4({plan, addOn}) {
                     </div>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">
+                  <div className="step4-tableCell step4-tableCell__end">
                     <p>{plan.termUser[0].price}</p>
                   </div>
                   <span className="step4-tableCell__border"></span>
                 </div>
                 <div className="step4-tableRow">
-                  <div className="step4-tableCell">
+                  <div className="step4-tableCell step4-tableCell__light">
                     {
                       addOn[0] ? addOn.map(el => {
                         return(
@@ -52,7 +52,7 @@ function Step4({plan, addOn}) {
                     }
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">
+                  <div className="step4-tableCell step4-tableCell__end">
                     {
                       addOn[0] ? addOn.map(el => {
                         return(
@@ -73,7 +73,7 @@ function Step4({plan, addOn}) {
                     </div>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  <div className="step4-tableCell">
+                  <div className="step4-tableCell step4-tableCell__end step4-tableCell__end-total ">
                     {
                       !addOn[0] 
                       ? <p>${plan.termUser[0].price.match(/\d+/)}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p> 
