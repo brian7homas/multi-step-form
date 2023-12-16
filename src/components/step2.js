@@ -3,7 +3,7 @@ import Step2Length from './step2Length'
 import PlanSelect from '../helpers/PlanSelect'
 import planData from '../data/planData'
 import '../styles/step2.css'
-
+import '../media-queries/step2.css'
 function Step2({ setPlan, plan, setAddOn }) {
   useEffect(() => {}, [plan])
   return (

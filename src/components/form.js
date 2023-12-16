@@ -7,6 +7,8 @@ import Step3 from "./step3"
 import Step4 from "./step4"
 import '../styles/formContainer.css'
 import '../styles/form.css'
+import '../media-queries/form.css'
+import '../media-queries/icons.css'
 import Step5 from "./step5"
 function Form({addOn, setAddOn, setPlan, plan, tl, SetActive}) {
   useEffect(() => {

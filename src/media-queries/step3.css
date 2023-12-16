@@ -1,0 +1,11 @@
+@media (max-width: 1024px) {
+  .step3-add-on{
+    max-width: none;
+  }
+}
+
+@media (max-width: 660px) {
+  .step3{
+    margin: 0 1.5em;
+  }
+}

@@ -2,6 +2,7 @@ import * as React from 'react'
 import PathP from '../../static/bg-sidebar-desktop.svg'
 import '../styles/menu.css'
 import '../styles/menuShapes.css'
+import '../media-queries/menu.css'
 // List data
 const menuText = [
   {

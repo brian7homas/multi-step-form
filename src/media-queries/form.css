@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+  .form-container-outer{
+    flex-direction: column;
+    box-shadow: none;
+    margin:-15em auto 0 auto;
+  }
+  .form-outer{
+    margin:0;
+  }
+  .form-btn-container{
+    left: auto;
+    height:auto;
+    width: auto;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .form-submit{
+    position: relative;
+    top:auto;
+    right:auto;
+  }
+  .form-submit-reverse{
+    position:relative;
+    top:auto;
+    left:auto;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-container-outer{
+    max-width: 75vw;
+  }
+  .form-btn-container{
+    /* left: 1em; */
+  }
+  .form-inner{
+    padding:0;
+    margin:3em 0 1em 0;
+  }
+}
