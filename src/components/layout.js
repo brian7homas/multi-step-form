@@ -23,17 +23,18 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{ 
+    <div 
+      className="media-container"
+      style={{ 
                 background: `var(--color-ala)`,
                 overflowX: 'hidden',
                 position: `relative`,
-          minHeight: `100vh`
                 }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
+        className="main-container"
         style={{
           margin: `.3em auto`,
-          maxWidth: `67.4rem`,
           padding: `0`,
           
         }}
