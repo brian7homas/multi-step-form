@@ -6,6 +6,8 @@
 }
 .step5-icon{
   overflow: hidden;
+  height: 130%;
+  margin: 0 auto;
 }
 .step5-thank-you{
   overflow: hidden;
