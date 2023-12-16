@@ -1,6 +1,6 @@
 import * as React from 'react'
 import '../styles/step1.css'
-
+import '../media-queries/step1.css'
 const Step1 = () => (
   <div className="step1 ">
     <h1 className="step1-header">Personal Info</h1>

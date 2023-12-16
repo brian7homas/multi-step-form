@@ -1,0 +1,26 @@
+.step5{
+  text-align: center;
+  display:grid; 
+  align-self: end;
+  padding-top:5.65em;
+}
+.step5-icon{
+  overflow: hidden;
+  height: 130%;
+  margin: 0 auto;
+}
+.step5-thank-you{
+  overflow: hidden;
+  font-family: var(--font-bold);
+  padding-top: 1em;
+  font-size: 2rem;
+}
+
+.step5-text{
+  overflow: hidden;
+  font-size: 1.25rem;
+  padding-top:1em;
+}
+.step5-text p{
+
+}

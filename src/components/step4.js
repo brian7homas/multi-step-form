@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../styles/step4.css'
+import '../media-queries/step4.css'
 function Step4({plan, addOn}) {
   
   let total = 0
@@ -35,8 +36,8 @@ function Step4({plan, addOn}) {
                     <div className="step4-tableCell__plan">
                       <p className="step4-tableCell__plan-name">{plan.name}</p>
                       <p className="step4-tableCell__plan-term">({plan.termUser[0].length})</p>
-                      <span><a id="change" href="#">change</a></span>
                     </div>
+                    <span><a id="change" href="#">Change</a></span>
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
                   {/* 
@@ -65,7 +66,7 @@ function Step4({plan, addOn}) {
                   {/* 
                       Add-on price - right
                   */}
-                  <div className="step4-tableCell step4-tableCell__end">
+                  <div className="step4-tableCell step4-tableCell__end .step4-tableCell__addon-price">
                     {
                       addOn[0] ? addOn.map(el => {
                         return(
@@ -84,7 +85,7 @@ function Step4({plan, addOn}) {
                       Total text - left
                     */}
                     <div className="step4-tableCell__total">
-                      <p className="step4-tableCell__plan-name">Total</p>
+                      <p className="step4-tableCell__plan-total">Total</p>
                       <span>per ({plan.termUser[0].length == 'monthly' ? 'month' : 'year'})</span>
                     </div>
                   </div>

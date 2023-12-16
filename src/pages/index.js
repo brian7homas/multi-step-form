@@ -29,6 +29,7 @@ function IndexPage () {
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
     let change = document.querySelector('#change')
+    let btn = document.querySelector('.form-submit')
     tl.add("step1")
       .add("step1-direct")
       .to(".step1", { opacity: 0 }, '.14')
@@ -52,6 +53,15 @@ function IndexPage () {
       .from(".step4", { y: '-10px', opacity: 0 })
       .add("step4-direct")
       .addPause()
+      .to(".step4", { opacity: 0 })
+      .add("step5")
+      .to([".form-submit", ".form-submit-reverse"], {opacity:0, display:'none', visibility:'hidden'})
+      .from(".step5", { y: '-10px', opacity: 0 }, '<')
+      .from(".step5-text p", { y: '2em', duration: 2 })
+      .fromTo(".step5-icon svg", { y: '10em', opacity: 0, display:'none' }, { duration: 2.2, ease: 'back.out' ,y: '1.35em', opacity: 1, display: 'block'}, "<")
+      .from(".step5-thank-you h1", { duration: 1.2, ease: 'back.out' ,y: '10em', opacity: 0, stagger: .15 }, '<')
+      .add("step5-direct")
+      .addPause()
     previous_btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
     next_btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
     change.addEventListener('click', () => {tl.timeScale(3).tweenTo('step2-direct');SetActive('step2', '', tl)})
@@ -63,29 +73,33 @@ function IndexPage () {
         switch (step){
           case 'step 1':
             tl
-              .timeScale(2)
-              .tweenTo('step1-direct');
+              .timeScale(3)
+              .tweenTo('step1-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[0].setAttribute("class", "menu-item-style menu-item-style__active")
             num[0].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 2':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step2-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[1].setAttribute("class", "menu-item-style menu-item-style__active")
             num[1].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 3':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step3-direct')
+              .then(() => btn.textContent == 'Next step' ?  true : btn.textContent = 'Next step')
             sel[2].setAttribute("class", "menu-item-style menu-item-style__active")
             num[2].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
           case 'step 4':
             tl
-              .timeScale(2)
+              .timeScale(3)
               .tweenTo('step4-direct')
+              .then(() => btn.textContent = 'Confirm')
             sel[3].setAttribute("class", "menu-item-style menu-item-style__active")
             num[3].setAttribute("class", "menu-item-style__number menu-item-style__number_active")
             break;
