@@ -1,0 +1,8 @@
+@media (max-width: 1024px) {
+  .step5-text{
+    padding: 1em 2em 0 2em;
+  }
+  .step5-icon{
+    height:130%;
+  }
+}

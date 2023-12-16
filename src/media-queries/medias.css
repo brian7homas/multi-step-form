@@ -1,0 +1,31 @@
+.main-container {
+  max-width: 67.4rem;
+}
+
+.media-container {
+  min-height: 100vh;
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    max-width: 44.4em;
+  }
+
+  .step1, .step2 {
+    margin:0 auto;
+  }
+  .step3, .step4, step5{
+    margin:0 4.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    max-width: unset;
+  }
+
+  .icon-arcade_svg__step2-tier-option__arcade-icon, .icon-advanced_svg__step2-tier-option__advanced-icon, .icon-pro_svg__step2-tier-option__pro-icon {
+    margin-right:4.5em;
+    margin-bottom:2em;
+  }
+}

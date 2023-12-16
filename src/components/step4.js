@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../styles/step4.css'
+import '../media-queries/step4.css'
 function Step4({plan, addOn}) {
   
   let total = 0
