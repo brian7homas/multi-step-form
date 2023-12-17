@@ -9,3 +9,9 @@
     margin: 0 1.5em;
   }
 }
+
+@media (max-width: 414px) {
+  .step3-add-on__checkbox-container{
+    width:3.3em;
+  }
+}

@@ -5,4 +5,13 @@
   .step5-icon{
     height:130%;
   }
+  .step5 {
+    align-self: start;
+  }
+}
+
+@media (max-width: 375px) {
+  .step5 {
+    align-self: start;
+  }
 }

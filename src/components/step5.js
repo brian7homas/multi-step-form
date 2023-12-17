@@ -1,6 +1,7 @@
 import React from "react"
 import FinishIcon from '../../static/icon-thank-you.svg'
 import '../styles/step5.css'
+import '../media-queries/step5.css'
 function Step5() {
   return (
     <section className="step5">

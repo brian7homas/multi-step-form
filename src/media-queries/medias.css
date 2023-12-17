@@ -29,3 +29,9 @@
     margin-bottom:2em;
   }
 }
+
+@media (max-width: 560px) {
+  .step1 {
+    margin:0 2em;
+  }
+}

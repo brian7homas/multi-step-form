@@ -32,7 +32,7 @@
 }
 
 .step2-tier-option:hover{
-  border: var(--color-blue-2) 2.5px solid;
+  border: hsla(243, 100%, 62%, .5 ) 2.5px solid;
   background-color: var(--color-ala);
 }
 .step2-tier-option__active{
@@ -138,4 +138,7 @@ input:checked~.step2-length__slider {
 input:checked~.step2-length__slider::before {
   transform: translateX(1.5em);
   background-color: white;
+}
+.step2-length__label{
+  /* font-size: var(--font-sm); */
 }
