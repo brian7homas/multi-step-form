@@ -38,3 +38,9 @@
   height: 10em;
   width: 32em;
 }
+
+.form-btn-container__mobile{
+  display:none;
+  opacity:0;
+  visibility: hidden;
+}

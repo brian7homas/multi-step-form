@@ -33,7 +33,7 @@ function Form({addOn, setAddOn, setPlan, plan, tl, SetActive}) {
             />
           <Step4 plan={plan} addOn={addOn}/>
           <Step5 />
-          <div className="form-btn-container">
+          <div className="form-btn-container form-btn-container__main">
             <a className="form-submit-reverse">Go Back</a>
             <button className="form-submit">Next Step</button>
           </div>
