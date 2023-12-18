@@ -9,3 +9,19 @@
 @media (max-width: 767px) {
   
 }
+
+@media (max-width: 414px) {
+  .step1-header {
+    font-size: 1.5rem;
+  }
+  .step1-sub {
+    margin-bottom: .5rem;
+    font-size: .85rem;
+  }
+  .step1-label{
+    font-size:.75rem;
+  }
+  .step1-form__cell:not(:first-of-type, :last-of-type){
+    margin:.7em 0;
+  }
+}

@@ -33,29 +33,29 @@ function Step3 ({addOn, setAddOn, plan}) {
     <div className="step3">
       <h1 className="step3-header">Pick add-ons</h1>
       <p className="step3-sub">Add-ons help enhance your gaming experience.</p>
-      <section>
+      <div>
         {
           AddOns.map((el, i) => {
             return(
               <div key={el.header} className="step3-add-on">
-                <section className="step3-add-on__checkbox-container">
-                  <label className="step3-add-on__checkbox" htmlFor="">
-                    <input type="checkbox" name="" id="" onClick={e => SelectAddOn(e, setAddOn, addOn)}/>
+                <div className="step3-add-on__checkbox-container">
+                  <label className="step3-add-on__checkbox" htmlFor={el.header.replace(' ', '-').toLowerCase()}>
+                    <input type="checkbox" name={el.header.replace(' ', '-').toLowerCase()} id={el.header.replace(' ', '-').toLowerCase()} onClick={e => SelectAddOn(e, setAddOn, addOn)}/>
                     <span></span>
                   </label>
-                </section>
-                <section className="step3-add-on__info">
-                  <h1 className="step3-add-on__header">{el.header}</h1>
+                </div>
+                <div className="step3-add-on__info">
+                  <h2 className="step3-add-on__header">{el.header}</h2>
                   <p className="step3-add-on__sub">{el.sub}</p>
-                </section>
-                <section className="step3-add-on__price">
+                </div>
+                <div className="step3-add-on__price">
                   <p className="step3-add-on__monthly">{plan.termUser[0].length == 'monthly' ? el.price.monthly : el.price.yearly}</p>
-                </section>
+                </div>
               </div>
             )
           })
         }
-      </section>
+      </div>
     </div>
   )
 }

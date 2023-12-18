@@ -10,8 +10,8 @@ function Step2({ setPlan, plan, setAddOn }) {
     <section className="step2">
       <h1 className="step2-header">Select your plan</h1>
       <p className="step2-sub">You have the option of monthly or yearly billing.</p>
-      <section className="step2-main">
-        <section className="step2-tier">
+      <div className="step2-main">
+        <div className="step2-tier">
           {
             planData.map((el, i) => {
               return (
@@ -21,17 +21,19 @@ function Step2({ setPlan, plan, setAddOn }) {
                   onClick={(e) => PlanSelect(e, setPlan, setAddOn)}>
                   <div className="step2-tier-option__inner">
                     {el.icon}
-                    <h1 className="step2-tier-option__text">{el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h1>
-                    <p className="step2-tier-option__price">{plan.termUser[0].length == 'monthly' ? el.term[0].price : el.term[1].price}</p>
-                    { plan.termUser[0].length == 'monthly' ? '' : <p className="step2-tier-option__free">2 months free</p>}
+                    <div>
+                      <h2 className="step2-tier-option__text">{el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h2>
+                      <p className="step2-tier-option__price">{plan.termUser[0].length == 'monthly' ? el.term[0].price : el.term[1].price}</p>
+                      { plan.termUser[0].length == 'monthly' ? '' : <p className="step2-tier-option__free">2 months free</p>}
+                    </div>
                   </div>
                 </div>
               )
             })
           }
-        </section>
+        </div>
         <Step2Length setPlan={setPlan} plan={plan} setAddOn={setAddOn}/>
-      </section>
+      </div>
     </section>
   )
 }
