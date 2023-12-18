@@ -11,7 +11,28 @@
 }
 
 @media (max-width: 414px) {
+  .step3-add-on{
+    padding: .7em .5em 0 .5em;
+  }
   .step3-add-on__checkbox-container{
     width:3.3em;
+    margin-right:.25rem;
   }
+  
+  .step3-header {
+    font-size: 1.5rem;
+  }
+  .step3-sub {
+    margin-bottom: .5rem;
+    font-size: .85rem;
+  }
+  .step3-add-on__header{
+    font-size: var(--font-md);
+    margin-bottom: 0;
+  }
+  .step3-add-on__sub{
+    font-size: .75rem;
+    margin-bottom: 1em;
+  }
+  
 }

@@ -49,8 +49,21 @@
     width: 85%;
   }
   
-  
   .step2-length{
     padding: 1em 3em;
+  }
+  .step2-header {
+    font-size: 1.5rem;
+  }
+  .step2-sub {
+    margin-bottom: .5rem;
+    font-size: .85rem;
+  }
+  
+  .step2-tier-option__inner{
+    margin: 0.5em 0 0.5em 1em;
+  }
+  .step2-tier-option:not(:last-of-type, :first-of-type){
+    margin:.5em 0;
   }
 }

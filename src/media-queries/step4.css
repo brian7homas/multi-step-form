@@ -10,11 +10,27 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 414px) {
+  .step4-header {
+    font-size: 1.5rem;
+  }
+  .step4-sub {
+    margin-bottom: .5rem;
+    font-size: .85rem;
+  }
   .step4-tableCell__total{
     flex-direction: column;
   }
   .step4-tableCell__total p{
     margin:0;
   }
+  .step4-tableCell__border{
+    bottom: 12.8em;
+    left:1em;
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  
 }

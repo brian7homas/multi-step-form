@@ -45,6 +45,7 @@
   .form-container-outer{
     max-width:90vw;
   }
+  
 }
 
 
@@ -59,4 +60,13 @@
     opacity:0;
     visibility:hidden;
   }
+  .form-inner{
+    min-height: auto;
+    margin:1em 0 1em 0;
+  }
+  .form-container-outer{
+    margin:-22em auto 0 auto;
+    min-height: 27em;
+  }
+  
 }

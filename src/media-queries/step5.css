@@ -9,7 +9,11 @@
     align-self: start;
   }
 }
-
+@media (max-width: 414px) {
+  .step5 {
+    padding-top: 0.15em;
+  }
+}
 @media (max-width: 375px) {
   .step5 {
     align-self: start;
