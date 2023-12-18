@@ -49,3 +49,9 @@
     top: -0.55em;
   }
 }
+
+@media (max-width: 414px) {
+  .menu-outer{
+    top:2em;
+  }
+}

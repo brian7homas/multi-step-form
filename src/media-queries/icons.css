@@ -12,3 +12,10 @@
     margin-bottom:1em;
   }
 }
+
+@media (max-width: 560px) {
+  .icon-arcade_svg__step2-tier-option__arcade-icon, .icon-advanced_svg__step2-tier-option__advanced-icon, .icon-pro_svg__step2-tier-option__pro-icon {
+    margin-right:2.5em;
+    margin-bottom:0;
+  }
+}

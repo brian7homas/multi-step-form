@@ -29,3 +29,24 @@
     margin-bottom:2em;
   }
 }
+
+@media (max-width: 560px) {
+  .step1 {
+    margin:0 2em;
+  }
+}
+
+@media (max-width: 414px) {
+  .media-container {
+    min-height: 88vh;
+  }
+} 
+
+@media (max-width: 375px) {
+  .step3-add-on-header{
+    font-size: var(--font-sx);
+  }
+  .step3-add-on-sub{
+    font-size: var(--font-sx);
+  }
+}

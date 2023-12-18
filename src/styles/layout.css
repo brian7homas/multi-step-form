@@ -4,7 +4,8 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'ubuntu-bold';
-  src: url(/fonts/Ubuntu-Bold.woff2) format("woff2");
+  /* src: url(/fonts/Ubuntu-Bold.woff2) format("woff2"); */
+  src: url(/projects/multi-step-form/fonts/Ubuntu-Bold.woff2) format("woff2");
 }
 @font-face {
   font-family: 'ubuntu-med';
@@ -12,7 +13,8 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'ubuntu-medium';
-  src: url(/fonts/Ubuntu-Medium.woff2) format("woff2");
+  /* src: url(/fonts/Ubuntu-Medium.woff2) format("woff2"); */
+  src: url(/projects/multi-step-form/fonts/Ubuntu-Medium.woff2) format("woff2");
 }
 @font-face {
   font-family: 'ubuntu-regular';
@@ -20,7 +22,8 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: 'unbuntu-regular';
-  src: url(/fonts/Ubuntu-Regular.woff2) format("woff2");
+  /* src: url(/fonts/Ubuntu-Regular.woff2) format("woff2"); */
+  src: url(/projects/multi-step-form/fonts/Ubuntu-Regular.woff2) format("woff2");
 }
 :root {
   --border-radius: 4px;

@@ -51,12 +51,14 @@ const Layout = ({ children }) => {
             position: `absolute`,
             bottom: 0,
             width: `100%`,
-            height: `2.5rem`
+            height: `2.5rem`,
+            padding: '0 2em 6em 2em',
           }}
         >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <div className="form-btn-container form-btn-container__mobile">
+            <a className="form-submit-reverse">Go Back</a>
+            <button className="form-submit">Next Step</button>
+          </div>
         </footer>
       </div>
     </div>

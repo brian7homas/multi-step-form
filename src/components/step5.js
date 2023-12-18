@@ -1,6 +1,7 @@
 import React from "react"
 import FinishIcon from '../../static/icon-thank-you.svg'
 import '../styles/step5.css'
+import '../media-queries/step5.css'
 function Step5() {
   return (
     <section className="step5">
@@ -8,7 +9,7 @@ function Step5() {
         <FinishIcon/>
       </div>
       <div className="step5-thank-you">
-        <h1>Thank You!</h1>
+        <h2>Thank You!</h2>
       </div>
       <div className="step5-text">
         <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>

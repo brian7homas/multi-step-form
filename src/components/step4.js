@@ -1,31 +1,17 @@
 import React, { useEffect } from 'react'
 import '../styles/step4.css'
 import '../media-queries/step4.css'
-function Step4({plan, addOn}) {
-  
+function Step4({ plan, addOn }) {
+
   let total = 0
-  const calculate = () => {
-    if(addOn.length > 2){
-      total = Number(addOn[0].plan.price) +
-      Number(addOn[1].plan.price) +
-      Number(plan.termUser[0].price.match(/\d+/))
-    }
-    if(addOn.length > 3){
-      total = Number(addOn[0].plan.price) +
-      Number(addOn[1].plan.price) +
-      Number(addOn[2].plan.price) +
-      Number(plan.termUser[0].price.match(/\d+/))
-    }
-    return total
-  }
-  useEffect(() =>{},[addOn])
-  return(
+  useEffect(() => { }, [addOn])
+  return (
     <div className="step4">
       <h1 className="step4-header">Finishing up</h1>
       <p className="step4-sub">Double check everything looks OK before confirming.</p>
-      <section>
-        <section>
-          <section>
+      <div>
+        <div>
+          <div>
             <div className="step4-table">
               <div className="step4-tableBody">
                 <div className="step4-tableRow">
@@ -55,27 +41,27 @@ function Step4({plan, addOn}) {
                   <div className="step4-tableCell step4-tableCell__light">
                     {
                       addOn[0] ? addOn.map(el => {
-                        return(
+                        return (
                           <p key={el.plan.name}>{el.plan.name}</p>
                         )
-                      } ) : <p>(No Add-ons added)</p>
+                      }) : <p>(No Add-ons added)</p>
                     }
                   </div>
                   <div className="step4-tableCell">&nbsp;</div>
-                  
+
                   {/* 
                       Add-on price - right
                   */}
                   <div className="step4-tableCell step4-tableCell__end .step4-tableCell__addon-price">
                     {
                       addOn[0] ? addOn.map(el => {
-                        return(
+                        return (
                           <p key={el.plan.name + '-' + el.plan.price}>
                             +${el.plan.price}
                             {plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}
                           </p>
                         )
-                      } ) : <p>$0</p>
+                      }) : <p>$0</p>
                     }
                   </div>
                 </div>
@@ -95,42 +81,36 @@ function Step4({plan, addOn}) {
                   <div className="step4-tableCell">&nbsp;</div>
                   <div className="step4-tableCell step4-tableCell__end step4-tableCell__end-total ">
                     {
-                      !addOn[0] 
-                      ? <p>${plan.termUser[0].price.match(/\d+/)}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p> 
-                      : addOn.map(() =>{
-                        total = 0
-                        if(addOn.length == 1){
-                          total = Number(addOn[0].plan.price) +
-                            Number(plan.termUser[0].price.match(/\d+/))
-                        }
-                        
-                        if(addOn.length == 2){
-                          total = Number(addOn[0].plan.price) +
-                            Number(addOn[1].plan.price) +
-                            Number(plan.termUser[0].price.match(/\d+/))
-                        }
-                        if(addOn.length == 3){
-                          total = Number(addOn[0].plan.price) +
-                            Number(addOn[1].plan.price) +
-                            Number(addOn[2].plan.price) +
-                            Number(plan.termUser[0].price.match(/\d+/))
-                        }
-                      })
+                      !addOn[0]
+                        ? <p>${plan.termUser[0].price.match(/\d+/)}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p>
+                        : addOn.map(() => {
+                          total = 0
+                          if (addOn.length == 1) {
+                            total = Number(addOn[0].plan.price) +
+                              Number(plan.termUser[0].price.match(/\d+/))
+                          }
+
+                          if (addOn.length == 2) {
+                            total = Number(addOn[0].plan.price) +
+                              Number(addOn[1].plan.price) +
+                              Number(plan.termUser[0].price.match(/\d+/))
+                          }
+                          if (addOn.length == 3) {
+                            total = Number(addOn[0].plan.price) +
+                              Number(addOn[1].plan.price) +
+                              Number(addOn[2].plan.price) +
+                              Number(plan.termUser[0].price.match(/\d+/))
+                          }
+                        })
                     }
                     {!addOn[0] ? '' : <p>${total}{plan.termUser[0].length == 'monthly' ? '/mo' : '/yr'}</p>}
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-      </section>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

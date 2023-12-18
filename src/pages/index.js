@@ -23,9 +23,9 @@ function IndexPage () {
   const [plan, setPlan] = useState(planData[0])
   const [addOn, setAddOn] = useState([])
   useEffect(() => {
-    let next_btn = document.querySelector(".form-submit" )
+    let next_btns = document.querySelectorAll(".form-submit" )    
     let menu_btn = document.querySelectorAll(".menu-item")
-    let previous_btn = document.querySelector(".form-submit-reverse")
+    let previous_btns = document.querySelectorAll(".form-submit-reverse")
     let sel = document.querySelectorAll(".menu-item-style")
     let num = document.querySelectorAll(".menu-item-style__number")
     let change = document.querySelector('#change')
@@ -62,8 +62,12 @@ function IndexPage () {
       .from(".step5-thank-you h1", { duration: 1.2, ease: 'back.out' ,y: '10em', opacity: 0, stagger: .15 }, '<')
       .add("step5-direct")
       .addPause()
-    previous_btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
-    next_btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
+    previous_btns.forEach((btn) => {
+      btn.addEventListener("click", () => {tl.reverse(); SetActive('', 'prev', tl)})
+    })
+    next_btns.forEach((btn) => {
+      btn.addEventListener('click', () => {tl.play(); SetActive('', 'next', tl)})
+    })
     change.addEventListener('click', () => {tl.timeScale(3).tweenTo('step2-direct');SetActive('step2', '', tl)})
     menu_btn.forEach((el, i) => {
       el.addEventListener('click', (index) => {
