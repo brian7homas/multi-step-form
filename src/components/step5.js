@@ -9,7 +9,7 @@ function Step5() {
         <FinishIcon/>
       </div>
       <div className="step5-thank-you">
-        <h1>Thank You!</h1>
+        <h2>Thank You!</h2>
       </div>
       <div className="step5-text">
         <p>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com</p>

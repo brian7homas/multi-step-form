@@ -23,9 +23,9 @@ function Step4({plan, addOn}) {
     <div className="step4">
       <h1 className="step4-header">Finishing up</h1>
       <p className="step4-sub">Double check everything looks OK before confirming.</p>
-      <section>
-        <section>
-          <section>
+      <div>
+        <div>
+          <div>
             <div className="step4-table">
               <div className="step4-tableBody">
                 <div className="step4-tableRow">
@@ -122,15 +122,9 @@ function Step4({plan, addOn}) {
                 </div>
               </div>
             </div>
-          </section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-      </section>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
