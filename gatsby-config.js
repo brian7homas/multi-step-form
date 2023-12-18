@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: `/projects/multi-step-form`,
   siteMetadata: {
     title: `Multi-Step Form`,
     description: `Fontend Mentor Challenge`,
