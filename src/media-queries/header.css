@@ -1,6 +1,7 @@
 @media (max-width: 1024px) {
   .header{
-    background: url(/bg-sidebar-mobile.svg);
+    /* background: url(/bg-sidebar-mobile.svg); */
+    background: url(/projects/multi-step-form/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
